@@ -1,0 +1,27 @@
+@font-face{ 
+	font-family: 'KS';
+	src: url('../fonts/KaushanScript-Regular.otf');
+}
+
+@font-face{ 
+	font-family: 'MontserratR';
+	src: url('../fonts/Montserrat-Regular.otf');
+}
+
+@font-face{ 
+	font-family: 'MontserratB';
+	src: url('../fonts/Montserrat-Bold.otf');
+}
+
+body{
+    font-family: 'MontserratR', sans-serif;
+    line-height: 1.7;
+    color: $grey;
+}
+
+a,
+a:visited,
+a:link{
+	text-decoration: none;
+	color: inherit;
+}
