@@ -1,0 +1,56 @@
+.overlay{
+    position: relative;
+    width: 40rem;
+    height: 25rem;
+    transition: all .3s;
+
+    
+
+    &__img{
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    &__gradient{
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, rgba($pink, .9), rgba($yellow, .9));
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        transition: all .4s;
+        transform: scale(0);
+    }
+
+    &__icon-containe{
+        
+    }
+
+    &__icon{
+        fill: $white;
+        height: 4rem;
+        width: 4rem;
+    }
+
+    &__capture{
+        color: $white;
+        text-transform: uppercase;
+        font-family: 'MontserratB';
+        font-size: 2rem;
+    }
+
+    &:hover{
+        box-shadow: 1rem 1rem $green;     
+    }
+
+    &:hover &__gradient{
+        transform: scale(1);
+    }
+}

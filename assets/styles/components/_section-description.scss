@@ -1,0 +1,11 @@
+.section-description{
+    color: $grey;
+    max-width: 100rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__content{
+        font-size: 1.6rem;
+        font-family: 'Roboto', sans-serif;
+    }
+}

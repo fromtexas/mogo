@@ -5,6 +5,11 @@
     &__logo{
         font-family: 'MontserratB';
         font-size: 3rem;
+        transition: all .3s;
+
+        &:hover{
+            color: $yellow;
+        }
     }
 
     &__links-container{
@@ -13,12 +18,48 @@
     }
 
     &__link{
+        position: relative;
         font-size: 1.6rem;
         text-transform: uppercase;
         margin-right: 7rem;
+        transition: all .3s;
+
+        &:before{
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background-color: $yellow;
+            transition: all .4s;
+        }
+
+        &:hover{
+            color: $yellow;
+
+            &::before{
+                width: 80%;
+            }
+        }
     }
 
     &__icon{
+        &:not(:last-child){
+            margin-right: 7rem;
+        }
+        svg{
+            fill: $white;
+            width: 2rem;
+            height: 2rem;
+            transition: all .3s;
+        }
+    }
 
+    &__icon:hover{
+        svg{
+            fill: $yellow;
+        }
     }
 }

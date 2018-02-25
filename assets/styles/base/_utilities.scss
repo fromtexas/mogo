@@ -1,3 +1,16 @@
 .center{
     text-align: center;
 }
+
+.margin-bottom-9{
+    margin-bottom: 9rem;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+
+    &--center{
+        justify-content: center;
+    }
+}
