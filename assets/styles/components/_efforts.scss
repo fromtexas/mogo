@@ -1,0 +1,30 @@
+.efforts{
+    background-color: $green;
+    color: $white;
+
+    &__item{
+        height: 25rem;
+        border-left: 1px solid $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        flex: 1;
+
+        &:last-child{
+            border-right: 1px solid $white;
+        }
+    }
+
+    &__number{
+        font-family: 'MontserratB';
+        font-size: 6rem;
+    }
+
+    &__title{
+        font-family: 'MontserratR';
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
+}

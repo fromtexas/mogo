@@ -13,4 +13,8 @@
     &--center{
         justify-content: center;
     }
+
+    &--border-top{
+        border-top: 1px solid rgba($grey, .3);
+    }
 }

@@ -1,0 +1,29 @@
+.service{
+    &__item{
+        display: flex;
+        flex: 1;
+        padding: 3rem;
+    }
+
+    &__icon{
+        height: 6rem;
+        width: 6rem;
+        fill: $green;
+    }
+
+    &__description-container{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    &__title{
+        font-size: 1.6rem;
+        color: $grey-dark;
+        text-transform: uppercase;
+    }
+
+    &__description{
+        font-size: 1.6rem;
+        font-family: 'Roboto';
+    }
+}
