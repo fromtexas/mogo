@@ -1,0 +1,28 @@
+.design{
+    height: 85vh;
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba($white, .8), rgba($white, .8)), url('../img/design-background.png');
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: left;
+    background-size: cover;
+    padding-top: 10rem;
+
+    &__ipad{
+        position: absolute;
+        display: block;
+        left: 50%;
+        transform: translateX(-50%) translateY(0rem);
+        width: 50rem;
+    }
+
+    &__iphone{
+        width: 30rem;
+        position: absolute;
+        display: block;
+        left: 50%;
+        bottom: -10rem;
+        z-index: 3;
+        transform: translateX(30%); //<---- new way of positioning
+    }
+}

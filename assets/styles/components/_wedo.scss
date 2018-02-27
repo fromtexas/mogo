@@ -1,0 +1,18 @@
+.wedo{
+    z-index: 2;
+    position: relative;
+    background-color: $white;
+    height: 85vh;
+
+    &__pic{
+        display: block;
+        flex: 1;
+        margin-right: 2rem;
+        object-fit: cover;
+        align-self: flex-start;
+    }
+
+    &__accordion{
+        width: 50%;
+    }
+}

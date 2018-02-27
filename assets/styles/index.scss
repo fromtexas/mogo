@@ -11,8 +11,13 @@
 @import './components/overlay';
 @import './components/efforts';
 @import './components/service';
+@import './components/design'; //<---- new way of positioning
+@import './components/wedo';
+@import './components/accordion';
 
 @import './layout/navigation';
 @import './layout/header';
 
 @import './pages/home';
+
+@import './vendor/OverlayScrollbars';

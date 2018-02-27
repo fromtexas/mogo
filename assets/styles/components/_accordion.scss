@@ -1,0 +1,54 @@
+.accordion{
+    &__item{
+        padding-bottom: 1rem; 
+    }
+
+    &__item-header{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 1.5rem;
+        border: 1px solid rgba($grey, .5);
+        cursor: pointer;
+    }
+
+    &__title{
+        color: $grey-dark;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        margin-left: 1.5rem;
+        z-index: -1;
+    }
+
+    &__icon{
+        width: 4rem;
+        height: 4rem;
+        fill: $green;
+        z-index: -1;
+    }
+
+    &__arrow-icon{
+        width: 4rem;
+        height: 4rem;
+        fill: rgba($grey, .5);
+        margin-left: auto;
+        cursor: pointer;
+        transition: all .3s;
+        z-index: -1;
+    }
+
+    &__text-container{
+        padding: 1.5rem;
+        border: 1px solid rgba($grey, .5);
+        border-top: none;
+        height: 20rem;
+        transition: all .3s;
+    }
+
+    &__text{
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-style: italic;
+        font-size: 1.6rem;
+    }
+}
