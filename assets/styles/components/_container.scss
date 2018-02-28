@@ -1,4 +1,9 @@
 .container{
     max-width: 120rem;
     margin: 0 auto;
+
+    &--rel{
+        position: relative;
+        height: 100%;
+    }
 }

@@ -21,6 +21,11 @@
         align-items: center;
         justify-content: center;
         transition: all .3s;
+        visibility: hidden;
+    }
+
+    &__active-slide{
+        visibility: visible;
     }
 
     &__arrow{
@@ -64,7 +69,7 @@
         font-size: 2rem;
         font-weight: 300;
         font-style: italic;
-        color: rgba($grey, .4);
+        color: rgba($grey, .8);
     }
 
     &__author{

@@ -1,16 +1,39 @@
 .overlay{
     position: relative;
-    width: 40rem;
-    height: 25rem;
     transition: all .3s;
 
     &--about{
         margin-top: 10rem;
         margin-bottom: 10rem;
+        width: 40rem;
+        height: 25rem;
 
         &:not(:last-child){
             margin-right: 3rem;
         }
+    }
+
+    &--team{
+        width: 37rem;
+        height: 55rem;
+        margin-bottom: 3rem;
+
+        &:not(:last-child){
+            margin-right: 3rem;
+        }
+    }
+
+    &__name{
+        font-size: 1.6rem;
+        color: $grey-dark;
+        text-transform: uppercase;
+    }
+
+    &__job{
+        font-family: 'Roboto';
+        font-size: 1.6rem;
+        font-weight: 300;
+        font-style: italic;
     }
 
     &__img{
@@ -36,7 +59,7 @@
         transform: scale(0);
     }
 
-    &__icon-containe{
+    &__icon-container{
         
     }
 
@@ -44,6 +67,21 @@
         fill: $white;
         height: 4rem;
         width: 4rem;
+
+        &--team{
+            height: 5rem;
+            width: 5rem;
+            padding: 1rem;
+            background-color: $yellow;
+            fill: $pink;
+            transition: all .3s;
+            cursor: pointer;
+
+            &:hover{
+                fill: $white;
+                background-color: $pink;
+            }
+        }
     }
 
     &__capture{

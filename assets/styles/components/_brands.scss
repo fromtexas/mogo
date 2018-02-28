@@ -1,0 +1,12 @@
+.brands{
+    height: 25rem;
+    background-color: rgba($grey, .1);
+
+    &__pic{
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
