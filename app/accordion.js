@@ -20,6 +20,22 @@ const accordion = (() => {
         }
 
         if(textContainer.style.height === '0px'){
+
+            let arrows = document.getElementsByClassName('accordion__arrow-icon');
+            let containers = document.getElementsByClassName('accordion__text-container');
+
+            [...containers].forEach(item => {
+                item.style.height = 0;
+                item.style.padding = 0;
+                item.style.borderBottom = 'none';
+                //item.getElementsByClassName('accordion__arrow-icon')[0].style.transform = 'rotate(0deg)';
+                //arrow.style.transform = 'rotate(0deg)';
+            });
+
+            [...arrows].forEach(item => {
+                item.style.transform = 'rotate(0deg)';
+            });
+
             textContainer.style.padding = '1.5rem';
             textContainer.style.height = '20rem';
             textContainer.style.borderBottom = '1px solid rgba(159, 159, 159, 0.5)';
