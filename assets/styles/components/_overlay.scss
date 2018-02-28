@@ -2,6 +2,20 @@
     position: relative;
     transition: all .3s;
 
+    &--work{ //<---responsive squre
+        width: 100%;
+
+        &::after{
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+    }
+
+    &--work-large{
+        width: 25%;
+    }
+
     &--about{
         margin-top: 10rem;
         margin-bottom: 10rem;
