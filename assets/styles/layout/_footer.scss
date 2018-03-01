@@ -1,0 +1,171 @@
+.footer{
+    padding-top: 10rem;
+    background-color: rgba($grey, .1);
+
+    &__col-1{
+        width: 35%;
+        margin-right: 3rem;
+    }
+
+    &__logo{
+        font-family: 'MontserratB';
+        font-size: 4rem;
+        color: rgba($grey, .7);
+    }
+
+    &__description{
+        font-size: 1.6rem;
+        margin-bottom: 4rem;
+    }
+
+    &__followers{
+        font-size: 1.6rem;
+        color: $grey-dark;
+    }
+
+    &__followers-counter{
+        font-family: 'MontserratB';
+        color: $grey-dark;
+        font-size: 2rem;
+    }
+
+    &__socials-container{
+        display: flex;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba($grey, .2);
+    }
+
+    &__socials-advice{
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-style: italic;
+        font-size: 1.6rem;
+        margin-right: 2rem;
+    }
+
+    &__socials-icon{
+        fill: $green;
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+    }
+
+    &__form{
+        margin-top: 4rem;
+        display: flex;
+    }
+
+    &__input{
+        border: 1px solid rgba($grey, .2);
+        padding: 1rem;
+        font-size: 1.6rem;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-style: italic;
+        width: 25rem;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &__btn{
+        text-transform: uppercase;
+        font-family: 'MontserratR';
+        cursor: pointer;
+        background-color: $green;
+        border-radius: 0;
+        color: $white;
+        font-size: 1.6rem;
+        padding: 1rem 4rem;
+        border: none;
+    }
+
+    &__col-2{
+        width: 35%;
+    }
+
+    &__blogs-title{
+        font-size: 1.6rem;
+        color: $grey-dark;
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+    }
+
+    &__blogs-item{
+        display: flex;
+        align-items: center;
+        &:not(:last-child){
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__blogs-pic{
+        display: block;
+        width: 15rem;
+        margin-right: 2rem;
+    }
+
+    &__blog-item-title{
+        font-size: 1.6rem;
+        color: $grey-dark;
+        text-transform: uppercase;
+    }
+
+    &__blog-item-date{
+        font-size: 1.6rem;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    &__blog-text-wpap{
+
+    }
+
+    &__col-3{
+        margin-left: 5rem;
+    }
+
+    &__instagram-pic{
+        display: block;
+        height: 8.5rem;
+        width: 8.5rem;
+        object-fit: cover;
+        margin-bottom: 1px;
+        margin-right: 1px;
+    }
+
+    &__more{
+        font-size: 1.6rem;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-style: italic;
+        margin-top: 2rem;
+        display: block;
+    }
+
+    &__bottom{
+        margin-top: 7rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        display: flex;
+        border-top: 1px solid rgba($grey, .2);
+        font-size: 1.6rem;
+        justify-content: center;
+    }
+
+    &__creators{
+        color: $grey-dark;
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
+
+        .footer__author{
+            color: $pink;
+        }
+    }
+
+    
+}
