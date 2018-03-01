@@ -1,0 +1,55 @@
+.clients{
+    height: 85vh;
+    background-image: linear-gradient(to bottom, rgba($white, .8), rgba($white, .8)), url('../img/clients.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__pic{
+        display: block;
+        width: 12rem;
+        height: 12rem;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    &__item{
+        display: flex;
+
+        &:first-child{
+            margin-right: 10rem;
+        }
+    }
+
+    &__description-container{
+        margin-left: 2rem;
+    }
+
+    &__name{
+        text-transform: uppercase;
+        color: $grey-dark;
+        font-size: 1.6rem;
+    }
+
+    &__job{
+        font-family: 'Roboto';
+        font-size: 1.6rem;
+        font-weight: 300;
+        font-style: italic;
+        position: relative;
+        margin-bottom: 4rem;
+
+        &::before{
+            position: absolute;
+            content: '';
+            bottom: -2rem;
+            width: 7rem;
+            height: 3px;
+            background-color: $pink;
+        }
+    }
+
+    &__review{
+        font-size: 1.6rem;
+    }
+}

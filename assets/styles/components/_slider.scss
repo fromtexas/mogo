@@ -9,6 +9,14 @@
         background-color: transparent;
     }
 
+    &__pic{
+        border-radius: 50%;
+        height: 20rem;
+        width: 20rem;
+        object-fit: cover;
+        display: block;
+    }
+
     &__container{
         max-width: 120rem;
         position: relative;
