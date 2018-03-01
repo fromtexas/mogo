@@ -1,0 +1,42 @@
+.map{
+    background-image: linear-gradient(to bottom, rgba($white, .8), rgba($white, .8)), url('../img/map.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__item-wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title{
+        font-family: 'MontserratB';
+        font-size: 2.6rem;
+        color: $pink;
+        position: relative;
+        text-align: center;
+        
+        &::before{
+            position: absolute;
+            content: '';
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -2rem;
+            width: 6rem;
+            height: 3px;
+            background-color: $pink;
+        }
+    }
+
+    &__icon{
+        cursor: pointer;
+        width: 3rem;
+        height: 3rem;
+        fill: $pink;
+    }
+}
