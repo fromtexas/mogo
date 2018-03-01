@@ -105,6 +105,14 @@
         font-size: 2rem;
     }
 
+    &__subcapture{
+        color: $white;
+        font-family: 'Roboto';
+        font-size: 1.6rem;
+        font-weight: 300;
+        font-style: italic;
+    }
+
     &:hover{
         box-shadow: 1rem 1rem $green;     
     }

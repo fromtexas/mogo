@@ -5,6 +5,10 @@
     margin-top: 10rem;
     margin-bottom: 10rem;
 
+    &--transparent{
+        background-color: transparent;
+    }
+
     &__container{
         max-width: 120rem;
         position: relative;

@@ -1,61 +1,92 @@
-const slider = (() => {
+
+const betterSlider = (() => {
+    const sliders = document.getElementsByClassName('slider');
     const slides = document.getElementsByClassName('slider__slide');
-    const left = document.getElementsByClassName('slider__arrow--left')[0];
-    const right = document.getElementsByClassName('slider__arrow--right')[0];
+    const left = document.getElementsByClassName('slider__arrow--left');
+    const right = document.getElementsByClassName('slider__arrow--right');
 
-    let currentSlide = 0;
+    let sliderSlides = {};
+    let currentSlides = {};
 
-    [...slides].forEach((item, index) => {
-        if(index){
-            item.style.left = '100%';
-        } else{
-            item.style.left = 0;
-            item.classList.add('slider__active-slide');
+    const initSlides = (positionFunc) => {
+        if(sliders.length >= 1){
+            [...sliders].forEach((item, index) => {
+                sliderSlides[index] = item.getElementsByClassName('slider__slide');
+                currentSlides[index] = 0;
+            });
+            positionFunc();
         }
-    });
+    };
 
-    left.addEventListener('click', () => {
+    const positionSlides = () => {
+        [...sliders].forEach((item, index) => {
+            [...sliderSlides[index]].forEach((item, index) => {
+                if(index){
+                    item.style.left = '100%';
+                } 
+                else{
+                    item.style.left = 0;
+                    item.classList.add('slider__active-slide');
+                }
+            });
+        });
+    };
 
-        if(slides.length-1 > currentSlide){
-            slides[currentSlide].style.left = '-100%';
-            slides[currentSlide].classList.remove('slider__active-slide');
+    const moveLeft = (index) => {
+        if(sliderSlides[index].length-1 > currentSlides[index]){
+            sliderSlides[index][currentSlides[index]].style.left = '-100%';
+            sliderSlides[index][currentSlides[index]].classList.remove('slider__active-slide');
+            sliderSlides[index][currentSlides[index]+1].style.left = 0;
+            sliderSlides[index][currentSlides[index]+1].classList.add('slider__active-slide');
 
-            slides[currentSlide+1].style.left = 0;
-            slides[currentSlide+1].classList.add('slider__active-slide');
+            currentSlides[index] = currentSlides[index] + 1;
 
-            currentSlide = currentSlide + 1;
-
-        } else {
-            [...slides].forEach((slide) => {
+        } 
+        else {
+            [...sliderSlides[index]].forEach((slide) => {
                 if(!slide.classList.contains('slider__active-slide')){
                     slide.style.left = '100%'
                 }
             });
 
             setTimeout(() => {
-                slides[currentSlide].classList.remove('slider__active-slide');
+                sliderSlides[index][currentSlides[index]].classList.remove('slider__active-slide');
 
-                currentSlide = 0;
+                currentSlides[index] = 0;
 
-                slides[currentSlide].style.left = 0;
-
-                slides[slides.length-1].style.left = '100%';
+                sliderSlides[index][currentSlides[index]].style.left = 0;
+                sliderSlides[index][sliderSlides[index].length -1].style.left = '100%';
                 
-                slides[currentSlide].classList.add('slider__active-slide');
+                sliderSlides[index][currentSlides[index]].classList.add('slider__active-slide');
             }, 200);
+        }
+    };
 
-        }    
-    });
+    const moveRight = (index) => {
+        sliderSlides[index][currentSlides[index]].style.left = '100%';
+        sliderSlides[index][currentSlides[index]].classList.remove('slider__active-slide');
 
-    right.addEventListener('click', () => {
-
-        slides[currentSlide].style.left = '100%';
-        slides[currentSlide].classList.remove('slider__active-slide');
-
-        currentSlide = currentSlide ?  currentSlide -1 : slides.length-1;
+        currentSlides[index] = currentSlides[index] ? currentSlides[index] -1 : sliderSlides[index].length -1;
         
-        slides[currentSlide].style.left = 0;
-        slides[currentSlide].classList.add('slider__active-slide');      
-    });
+        sliderSlides[index][currentSlides[index]].style.left = 0;
+        sliderSlides[index][currentSlides[index]].classList.add('slider__active-slide');
+    };
 
+    if(left.length) {
+        [...left].forEach((item, index) => {
+            item.addEventListener('click', () => {
+                moveLeft(index);
+            });
+        });
+    }
+
+    if(right.length){
+        [...right].forEach((item, index) => {
+            item.addEventListener('click', () => {
+                moveRight(index);
+            });
+        })
+    }
+
+    initSlides(positionSlides);
 })();
