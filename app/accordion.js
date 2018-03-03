@@ -37,7 +37,7 @@ const accordion = (() => {
             });
 
             textContainer.style.padding = '1.5rem';
-            textContainer.style.height = '20rem';
+            textContainer.style.height = '12rem';
             textContainer.style.borderBottom = '1px solid rgba(159, 159, 159, 0.5)';
             arrow.style.transform = 'rotate(180deg)';
         } else{

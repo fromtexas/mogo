@@ -8,6 +8,10 @@
     background-size: cover;
     padding-top: 10rem;
 
+    @include respond(big-desktop){
+        font-size: 100vh;
+    }
+
     &__ipad{
         position: absolute;
         display: block;

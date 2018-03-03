@@ -43,6 +43,10 @@
         border-top: none;
         height: 20rem;
         transition: all .3s;
+
+        @include respond(big-desktop){
+            height: 12rem;
+        }
     }
 
     &__text{

@@ -5,6 +5,10 @@
     background-position: center;
     background-repeat: no-repeat;
 
+    @include respond(big-desktop){
+        height: 100vh;
+    }
+
     &__pic{
         display: block;
         width: 12rem;
