@@ -1,12 +1,13 @@
 .clients{
-    height: 85vh;
+    height: 100vh;
     background-image: linear-gradient(to bottom, rgba($white, .8), rgba($white, .8)), url('../img/clients.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    @include respond(big-desktop){
-        height: 100vh;
+    @include respond(phone){
+        height: auto;
+        padding-bottom: 10rem;
     }
 
     &__pic{

@@ -15,6 +15,11 @@
         &:last-child{
             border-right: 1px solid $white;
         }
+
+        @include respond(phone){
+            width: 100%;
+            flex: none;
+        }
     }
 
     &__number{

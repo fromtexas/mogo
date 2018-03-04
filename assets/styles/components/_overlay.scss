@@ -16,6 +16,12 @@
         width: 25%;
     }
 
+    &__container{
+        @include respond(phone){
+            width: 100%;
+        }
+    }
+
     &--about{
         margin-top: 10rem;
         margin-bottom: 10rem;
@@ -24,6 +30,17 @@
 
         &:not(:last-child){
             margin-right: 3rem;
+        }
+
+        @include respond(phone){
+            width: 100%;
+            height: 30rem;
+            margin-bottom: 3rem;
+            margin-top: 3rem;
+
+            &:not(:last-child){
+                margin-right: 0;
+            }
         }
     }
 
@@ -34,6 +51,13 @@
 
         &:not(:last-child){
             margin-right: 3rem;
+        }
+
+        @include respond(phone){
+            &:not(:last-child){
+                margin-right: 0;
+                width: 100%;
+            }
         }
     }
 

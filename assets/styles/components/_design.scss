@@ -18,6 +18,10 @@
         left: 50%;
         transform: translateX(-50%) translateY(0rem);
         width: 50rem;
+
+        @include respond(phone){
+            width: 40rem;
+        }
     }
 
     &__iphone{
@@ -28,5 +32,9 @@
         bottom: -10rem;
         z-index: 3;
         transform: translateX(30%); //<---- new way of positioning
+
+        @include respond(phone){
+            width: 35%;
+        }
     }
 }

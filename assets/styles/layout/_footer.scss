@@ -5,6 +5,10 @@
     &__col-1{
         width: 35%;
         margin-right: 3rem;
+
+        @include respond(phone){
+            width: 100%;
+        }
     }
 
     &__logo{
@@ -84,6 +88,10 @@
 
     &__col-2{
         width: 35%;
+
+        @include respond(phone){
+            width: 100%;
+        }
     }
 
     &__blogs-title{
@@ -126,6 +134,10 @@
 
     &__col-3{
         margin-left: 5rem;
+
+        @include respond(phone){
+            width: 100%;
+        }
     }
 
     &__instagram-pic{

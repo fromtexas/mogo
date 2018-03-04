@@ -24,5 +24,9 @@
 
     &--nowrap{
         flex-wrap: nowrap;
+
+        @include respond(phone){
+            flex-wrap: wrap;
+        }
     }
 }

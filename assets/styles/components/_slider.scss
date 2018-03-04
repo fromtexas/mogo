@@ -82,6 +82,10 @@
         font-weight: 300;
         font-style: italic;
         color: rgba($grey, .8);
+
+        @include respond(phone){
+            font-size: 1.4rem;
+        }
     }
 
     &__author{
@@ -90,6 +94,11 @@
         font-size: 3rem;
         position: relative;
         margin-left: 8rem;
+
+        @include respond(phone){
+            font-size: 2rem;
+        }
+
 
         &::before{
             content: '';

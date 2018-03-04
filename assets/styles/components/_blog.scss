@@ -5,6 +5,15 @@
         &:not(:last-child){
             margin-right: 3rem;
         }
+
+        @include respond(phone){
+            width: 100%;
+            margin-bottom: 5rem;
+            
+            &:not(:last-child){
+                margin-right: 0;
+            }
+        }
     }
 
     &__pic-container{
