@@ -1,9 +1,13 @@
 .clients{
     height: 100vh;
-    background-image: linear-gradient(to bottom, rgba($white, .8), rgba($white, .8)), url('../img/clients.png');
+    background-image: linear-gradient(to bottom, rgba($white, .8), rgba($white, .8)), url('../img/clients-small.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    @include background{
+        background-image: linear-gradient(to bottom, rgba($white, .8), rgba($white, .8)), url('../img/clients.png');
+    }
 
     @include respond(phone){
         height: auto;

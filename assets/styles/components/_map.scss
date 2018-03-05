@@ -1,5 +1,5 @@
 .map{
-    background-image: linear-gradient(to bottom, rgba($white, .8), rgba($white, .8)), url('../img/map.png');
+    background-image: linear-gradient(to bottom, rgba($white, .8), rgba($white, .8)), url('../img/map-small.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -7,6 +7,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include background{
+        background-image: linear-gradient(to bottom, rgba($white, .8), rgba($white, .8)), url('../img/map.png');
+    }
 
     &__item-wrap{
         display: flex;
