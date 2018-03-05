@@ -11,6 +11,10 @@
         font-size: 6rem;
         transition: all .3s;
 
+        @media only screen and (max-width: 67.5em){
+            margin-left: 3rem;
+        };
+
         &:hover{
             color: $yellow;
         }

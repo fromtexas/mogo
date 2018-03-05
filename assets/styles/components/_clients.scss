@@ -16,6 +16,11 @@
         height: 12rem;
         object-fit: cover;
         border-radius: 50%;
+        transition: all .5s;
+
+        &:hover{
+            transform: rotate(360deg);
+        }
     }
 
     &__item{
@@ -31,16 +36,11 @@
     }
 
     &__name{
-        text-transform: uppercase;
-        color: $grey-dark;
-        font-size: 1.6rem;
+        @include title;
     }
 
     &__job{
-        font-family: 'Roboto';
-        font-size: 1.6rem;
-        font-weight: 300;
-        font-style: italic;
+        @include italic;
         position: relative;
         margin-bottom: 4rem;
 

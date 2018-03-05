@@ -41,10 +41,7 @@
     }
 
     &__socials-advice{
-        font-family: 'Roboto';
-        font-weight: 300;
-        font-style: italic;
-        font-size: 1.6rem;
+        @include italic;
         margin-right: 2rem;
     }
 
@@ -53,6 +50,12 @@
         width: 2rem;
         height: 2rem;
         margin-right: 1rem;
+        cursor: pointer;
+        transition: all .4s;
+
+        &:hover{
+            fill: $pink;
+        }
     }
 
     &__form{
@@ -63,11 +66,8 @@
     &__input{
         border: 1px solid rgba($grey, .2);
         padding: 1rem;
-        font-size: 1.6rem;
-        font-family: 'Roboto';
-        font-weight: 300;
-        font-style: italic;
-        width: 25rem;
+        @include italic;
+        width: 20rem;
 
         &:focus{
             outline: none;
@@ -84,6 +84,16 @@
         font-size: 1.6rem;
         padding: 1rem 4rem;
         border: none;
+        transition: all .5s;
+
+        &:focus{
+            outline: none;
+        }
+
+        &:hover{
+            background-color: $pink; 
+            letter-spacing: .3rem;
+        }
     }
 
     &__col-2{
@@ -95,9 +105,7 @@
     }
 
     &__blogs-title{
-        font-size: 1.6rem;
-        color: $grey-dark;
-        text-transform: uppercase;
+        @include title;
         margin-bottom: 4rem;
     }
 
@@ -116,16 +124,11 @@
     }
 
     &__blog-item-title{
-        font-size: 1.6rem;
-        color: $grey-dark;
-        text-transform: uppercase;
+        @include title;
     }
 
     &__blog-item-date{
-        font-size: 1.6rem;
-        font-family: 'Roboto';
-        font-weight: 300;
-        font-style: italic;
+        @include italic;
     }
 
     &__blog-text-wpap{
@@ -150,10 +153,7 @@
     }
 
     &__more{
-        font-size: 1.6rem;
-        font-family: 'Roboto';
-        font-weight: 300;
-        font-style: italic;
+        @include italic;
         margin-top: 2rem;
         display: block;
     }

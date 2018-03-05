@@ -62,16 +62,11 @@
     }
 
     &__name{
-        font-size: 1.6rem;
-        color: $grey-dark;
-        text-transform: uppercase;
+        @include title;
     }
 
     &__job{
-        font-family: 'Roboto';
-        font-size: 1.6rem;
-        font-weight: 300;
-        font-style: italic;
+        @include italic;
     }
 
     &__img{
@@ -131,10 +126,7 @@
 
     &__subcapture{
         color: $white;
-        font-family: 'Roboto';
-        font-size: 1.6rem;
-        font-weight: 300;
-        font-style: italic;
+        @include italic;
     }
 
     &:hover{

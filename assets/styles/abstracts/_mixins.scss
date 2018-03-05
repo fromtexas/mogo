@@ -15,3 +15,17 @@
         @media only screen and (min-width: 112.5em){@content}; //1800px
     }
 }
+
+
+@mixin title{
+    font-size: 1.6rem;
+    color: $grey-dark;
+    text-transform: uppercase;
+}
+
+@mixin italic{
+    font-size: 1.6rem;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-style: italic;
+}

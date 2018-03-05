@@ -41,6 +41,10 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @include respond(tab-land){
+           left: 1.5rem;
+        }
     }
 
     &__number{
@@ -57,9 +61,7 @@
     }
 
     &__title{
-        text-transform: uppercase;
-        color: $grey-dark;
-        font-size: 1.6rem;
+        @include title;
     }
 
     &__description{
@@ -86,13 +88,15 @@
         width: 2rem;
         margin-right: .5rem;
         cursor: pointer;
+        transition: all .4s;
+
+        &:hover{
+            fill: $pink;
+        }
     }
 
     &__counter{
-        font-family: 'Roboto';
-        font-size: 1.6rem;
-        font-weight: 300;
-        font-style: italic;
+        @include italic;
         color: $grey;
     }
 }
