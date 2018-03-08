@@ -63,6 +63,23 @@
         display: flex;
     }
 
+    &__input-container{
+        position: relative;
+    }
+
+    &__input-label{
+        position: absolute;
+        transition: all .3s;
+        display: block;
+        @include italic;
+    }
+
+    &__input:placeholder-shown + &__input-label{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
     &__input{
         border: 1px solid rgba($grey, .2);
         padding: 1rem;
