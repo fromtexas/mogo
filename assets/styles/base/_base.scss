@@ -20,6 +20,10 @@ html{
   @include respond(big-desktop){
     font-size: 75%; //1rem = 12px
   }
+
+  @include respond(laptop){
+    font-size: 50%; //1rem = 8px
+  }
 }
 
 body{
