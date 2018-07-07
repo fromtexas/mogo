@@ -14,17 +14,18 @@
         padding-bottom: 10rem;
     }
 
-    &__pic{
-        display: block;
+    &__img-wrap{
         width: 12rem;
         height: 12rem;
-        object-fit: cover;
         border-radius: 50%;
-        transition: all .5s;
+        overflow: hidden;
+    }
 
-        &:hover{
-            transform: rotate(360deg);
-        }
+    &__pic{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     &__item{
@@ -37,6 +38,7 @@
 
     &__description-container{
         margin-left: 2rem;
+        flex: 1;
     }
 
     &__name{
